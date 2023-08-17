@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,40 +8,44 @@
     <link rel="icon" type="image/png" href="../../dist/images/favicon.png">
     <meta name="description" content="">
     <meta name="author" content="">
-    
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HS48LJ6769"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
 
-      gtag('config', 'G-HS48LJ6769');
-    </script>
-
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-HS48LJ6769');
     </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
     <style>
         html {
-          background: lightgoldenrodyellow;
+            background: lightgoldenrodyellow;
         }
+
         body {
-            margin:10px auto;
-            max-width:1100px;
-            line-height:1.4;
-            font-size:16px;
-            color:#444;
+            margin: 10px auto;
+            max-width: 1100px;
+            line-height: 1.4;
+            font-size: 16px;
+            color: #444;
             background: white;
-            padding:5px 10px;
+            padding: 5px 10px;
             font-family: 'Raleway', sans-serif;
         }
+
         .container {
             display: flex;
             flex-wrap: wrap;
         }
+
         .column {
             flex: 1;
             min-width: 200px;
@@ -49,34 +53,39 @@
             box-sizing: border-box;
         }
 
-        #left { background-color: #fff; }
-        #center { background-color: #fff; }
-        #right { background-color: #fff; }
-
         @media (max-width: 660px) {
             .column {
                 flex-basis: 100%;
             }
         }
-        h1,h2,h3{line-height:1.2}
-        .itemSummary {
-          font-size: 14px;
-          font-style: italic;
+
+        h1,
+        h2,
+        h3 {
+            line-height: 1.2;
         }
+
+        .itemSummary {
+            font-size: 14px;
+            font-style: italic;
+        }
+
         .itemTitle {
-          font-weight: bold;
-          font-size: 16px;
-        }       
+            font-weight: bold;
+            font-size: 16px;
+        }
+
         #clusterLabel {
             background-color: gold;
             color: black;
             padding: 1px 5px;
-            border-radius: px;
+            border-radius: 3px; /* fixed from 'px' to '3px' */
             font-weight: normal;
             font-size: 14px;
             margin-left: 5px;
             font-style: italic;
         }
+
         .dividingLine {
             border: 1px dotted #c6c6c6;
             border-style: none none dotted;
@@ -84,43 +93,75 @@
             background-color: #fff;
             padding-top: 24px;
         }
+
         .headercontainer {
-          background: white; font-weight: 700; margin-top: 0.5em; margin-bottom: 0.3em; padding: 0 20px;
+            background: white;
+            font-weight: 700;
+            margin-top: 0.5em;
+            margin-bottom: 0.3em;
+            padding: 0 20px;
         }
+
+        .siteTitle {
+            font-size: 34px;
+            font-weight: 700;
+            margin-top: 0.5em;
+            margin-bottom: 0em;
+        }
+
+        .updateInfo {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .updateInfo p {
+            font-size: 14px;
+        }
+
+        .updateInfo #lastUpdated {
+            text-align: right;
+        }
+
+        hr {
+            position: relative;
+            border: none;
+            height: 1px;
+            background: #333;
+        }
+
         .clusterImage {
-            max-width: 100%; /* or any desired width */
+            max-width: 100%;
             height: auto;
         }
     </style>
 
-
 </head>
 <body>
-  
     <div class="headercontainer">
-    <div class="clearfix">
-        <h2 class="siteTitle" style="font-size: 34px; font-weight: 700; margin-top: 0.5em; margin-bottom: 0em;">Current Indian</h2>
-        <div style="display: flex; justify-content: space-between;">
-          <p style="text-align: left; font-size: 14px;">The latest Indian news refreshed every 30 mins</p>
-          <p id="lastUpdated" style="text-align: right; font-size: 14px;"></p>
-          <script>
+        <h2 class="siteTitle">
+            <a href="#" style="text-decoration: none; color: inherit;">Current Indian</a>
+        </h2>
+        <div class="updateInfo">
+            <p>The latest Indian news refreshed every 30 mins</p>
+            <p id="lastUpdated"></p>
+        </div>
+        <hr>
+        <script>
             // Get last modified date of the document
             const lastUpdatedDate = new Date(document.lastModified);
             // Convert to IST
-            const options = { 
-                year: 'numeric', 
-                month: 'long', 
-                day: 'numeric', 
-                hour: '2-digit', 
-                minute: '2-digit', 
-                second: '2-digit', 
-                hour12: true, 
-                timeZone: 'Asia/Kolkata' 
+            const options = {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true,
+                timeZone: 'Asia/Kolkata'
             };
             document.getElementById('lastUpdated').textContent = "Last Updated: " + lastUpdatedDate.toLocaleString('en-IN', options);
         </script>
-        </div>
-        <hr style=" position:relative;border: none; height: 1px; background: #333;"> 
-    </div></div>
+    </div>
     <div class="container">
     <div class="column" id="left"><img src="https://static.toiimg.com/photo/msid-102786872,imgsize-1452773.cms" class="clusterImage" /><p class="itemTitle">Chandrayaan-3: Crucial lander module separation later today <span id="clusterLabel">tech</span></p><div class="itemLinks"><a class="singleLink" href="https://timesofindia.indiatimes.com/india/chandrayaan-3-crucial-lander-module-separation-later-today/articleshow/102786118.cms" target="_blank">TOI</a> | <a class="singleLink" href="https://www.ndtv.com/india-news/chandrayaan-3s-vikram-lander-to-separate-from-spacecraft-today-4304310" target="_blank">NDTV</a> | <a class="singleLink" href="https://www.news18.com/india/chandrayaan-3-vikram-lander-separation-today-isro-circular-lunar-orbit-achieved-india-moon-mission-8539060.html" target="_blank">News18</a></div><hr class="dividingLine"><p class="itemTitle">Ajit Pawar too junior to make an offer to Sharad: Sanjay Raut <span id="clusterLabel">politics</span></p><div class="itemLinks"><a class="singleLink" href="https://timesofindia.indiatimes.com/india/ajit-pawar-too-junior-to-make-an-offer-to-sharad-sanjay-raut/articleshow/102785208.cms" target="_blank">TOI</a> | <a class="singleLink" href="https://www.dnaindia.com/india/report-will-not-go-with-bjp-instead-says-sharad-pawar-claims-meeting-with-ajit-pawar-was-about-family-3056090" target="_blank">DNA</a></div><hr class="dividingLine"><p class="itemTitle">HC gives ED 2 weeks to prove Vadra 'violated' bail conditions <span id="clusterLabel">legal</span></p><p class="itemSummary">The Enforcement Directorate (ED) requested the Delhi high court on Wednesday to cancel Robert Vadra's anticipatory bail since 2019 in a money launderi...</p><div class="itemLinks"><a class="singleLink" href="https://timesofindia.indiatimes.com/india/hc-gives-ed-2-weeks-to-prove-vadra-violated-bail-conditions/articleshow/102785079.cms" target="_blank">TOI</a> | <a class="singleLink" href="https://www.news18.com/india/ed-challenges-anticipatory-bail-to-vadra-claims-non-compliance-with-bail-conditions-8538954.html" target="_blank">News18</a></div><hr class="dividingLine"><p class="itemTitle">PM Modi Mislead People From His Independence Day Speech: Gaurav Gogoi <span id="clusterLabel">politics</span></p><p class="itemSummary">Assam Congress leader and Kaliabor MP Gaurav Gogoi on Wednesday said that Prime Minister Narendra Modi have mislead the people of India from his Indep...</p><div class="itemLinks"><a class="singleLink" href="https://www.ndtv.com/india-news/congress-mp-gaurav-gogoi-says-prime-minister-narendra-modi-mislead-people-from-his-independence-day-speech-4304365" target="_blank">NDTV</a> | <a class="singleLink" href="https://www.news18.com/india/independence-day-2023-narendra-modi-speech-live-updates-77th-independence-day-speech-photos-videos-latest-news-livenews-8536669.html" target="_blank">News18</a></div><hr class="dividingLine"><p class="itemTitle">29 Women Among 53 CBI Officers To Probe Manipur Violence Cases <span id="clusterLabel">crime</span></p><p class="itemSummary">In a major mobilisation, the CBI on Wednesday deputed 53 officers, including 29 women, drawn from its units across the country to probe Manipur violen...</p><div class="itemLinks"><a class="singleLink" href="https://www.ndtv.com/india-news/manipur-violence-cases-29-women-among-53-cbi-officers-to-probe-manipur-violence-cases-4303722" target="_blank">NDTV</a> | <a class="singleLink" href="https://www.news18.com/india/hindi-film-to-be-screened-in-manipur-after-20-years-8537447.html" target="_blank">News18</a></div><hr class="dividingLine"><p class="itemTitle">"We Will Not Ban Bajrang Dal, But...": Congress Leader Digvijaya Singh <span id="clusterLabel">politics</span></p><p class="itemSummary">Former Madhya Pradesh Chief Minister and Congress Rajya Sabha MP, Digvijaya Singh said that Bajrang Dal would not be banned if his party is voted to p...</p><div class="itemLinks"><a class="singleLink" href="https://www.ndtv.com/india-news/we-will-not-ban-bajrang-dal-but-congress-leader-digvijaya-singh-4304285" target="_blank">NDTV</a> | <a class="singleLink" href="https://www.firstpost.com/india/hindu-rashtra-row-congress-wont-ban-bajrang-dal-in-mp-says-leader-digvijay-singh-13003422.html" target="_blank">Firstpost</a></div><hr class="dividingLine"><p class="itemTitle">Rahul Gandhi Nominated To Parliamentary Standing Committee On Defence <span id="clusterLabel">politics</span></p><p class="itemSummary">Days after his Lok Sabha membership was restored, Congress leader Rahul Gandhi was on Wednesday nominated to the parliamentary standing committee on d...</p><div class="itemLinks"><a class="singleLink" href="https://www.ndtv.com/india-news/rahul-gandhi-nominated-to-parliamentary-standing-committee-on-defence-4303229" target="_blank">NDTV</a> | <a class="singleLink" href="https://www.dnaindia.com/india/report-congress-leader-rahul-gandhi-nominated-to-parliamentary-standing-committee-on-defence-lok-sabha-3056118" target="_blank">DNA</a></div><hr class="dividingLine"><p class="itemTitle">UP Man Dies After Leaving Police Outpost, Family Accuses Cops Of Torture <span id="clusterLabel">crime</span></p><p class="itemSummary">A 42-year-old farmer called to a police outpost here for questioning in an SC/ST Act case died on Wednesday while returning home, officials said. His ...</p><div class="itemLinks"><a class="singleLink" href="https://www.ndtv.com/india-news/up-man-dies-after-leaving-police-outpost-family-accuses-cops-of-torture-4304146" target="_blank">NDTV</a> | <a class="singleLink" href="https://www.news18.com/india/kanpur-man-dies-after-leaving-police-outpost-family-claims-death-was-caused-by-torture-8539088.html" target="_blank">News18</a></div><hr class="dividingLine"><p class="itemTitle">Girl Suffers Burns As Crew Member Spills Hot Chocolate. Airline Says... <span id="clusterLabel">society</span></p><p class="itemSummary">Ordering a cup of hot chocolate on a flight turned into a traumatic experience for a 10-year-old after the beverage was accidentally spilled on her by...</p><div class="itemLinks"><a class="singleLink" href="https://www.ndtv.com/india-news/crew-member-spills-hot-chocolate-on-flight-10-year-old-suffers-burns-4304087" target="_blank">NDTV</a> | <a class="singleLink" href="https://www.news18.com/india/10-year-old-suffers-second-degree-burns-after-airline-crew-spills-hot-chocolate-8539033.html" target="_blank">News18</a></div><hr class="dividingLine"><p class="itemTitle">243 Pilgrims Rescued From Trek Route To Uttarakhand's Madmaheshwar Temple <span id="clusterLabel">society</span></p><p class="itemSummary">Rescuers have safely evacuated 243 pilgrims who were stranded since Monday on the trek route to Madmaheshwar temple in rain-hit Uttarakhand's Rudrapra...</p><div class="itemLinks"><a class="singleLink" href="https://www.ndtv.com/india-news/243-pilgrims-rescued-from-trek-route-to-uttarakhands-madmaheshwar-temple-4303799" target="_blank">NDTV</a> | <a class="singleLink" href="https://www.dnaindia.com/india/report-uttarakhand-weather-update-close-to-300-pilgrims-rescued-from-madmaheshwar-trek-route-rain-toll-rises-3056106" target="_blank">DNA</a></div><hr class="dividingLine"></div><div class="column" id="center"><p class="itemTitle">Himachal Pradesh update: 71 dead, 8,952 houses damaged; loss of Rs 7,500 crore recorded <span id="clusterLabel">society</span></p><p class="itemSummary">Chief Minister Sukhvinder Singh Sukhu said that around 400 out of a total of 1220 blocked roads have been restored to functionality....</p><div class="itemLinks"><a class="singleLink" href="https://www.dnaindia.com/india/report-himachal-pradesh-update-71-dead-8952-houses-damaged-loss-of-rs-7500-crore-landslide-shimla-imd-uttarakhand-3056111" target="_blank">DNA</a> | <a class="singleLink" href="https://www.news18.com/india/himachal-pradesh-landslides-shimla-houses-collapsed-updates-rains-weather-news-8537542.html" target="_blank">News18</a></div><hr class="dividingLine"><p class="itemTitle">Jaipur-Mumbai train killings: RPF constable Chetan Singh forced woman in burqa to say 'Jai Mata Di', says report <span id="clusterLabel">crime</span></p><p class="itemSummary">RPF Constable was sentenced to 14 days in judicial custody last week after a Mumbai court declined to prolong his police remand following allegations ...</p><div class="itemLinks"><a class="singleLink" href="https://www.dnaindia.com/india/report-jaipur-mumbai-train-killings-rpf-constable-chetan-singh-forced-woman-in-burqa-to-say-jai-mata-di-3056110" target="_blank">DNA</a> | <a class="singleLink" href="https://www.news18.com/india/mumbai-jaipur-train-firing-rpf-constable-who-killed-4-on-moving-train-dismissed-from-service-8539050.html" target="_blank">News18</a></div><hr class="dividingLine"><img src="https://cdn.dnaindia.com/sites/default/files/styles/third/public/2023/08/17/2603617-a-100.png" class="clusterImage" /><p class="itemTitle">Stones pelted at Vande Bharat Express in Kerala, third incident in 3 days <span id="clusterLabel">crime</span></p><p class="itemSummary">Visuals of the incident on TV channels showed the windowpane badly damaged and taped up from the outside....</p><div class="itemLinks"><a class="singleLink" href="https://www.dnaindia.com/india/report-stones-pelted-at-vande-bharat-express-in-kerala-third-incident-in-3-days-3056105" target="_blank">DNA</a> | <a class="singleLink" href="https://www.news18.com/india/fresh-incidents-of-stone-pelting-on-trains-continue-in-kerala-vande-bharat-express-window-damaged-8538827.html" target="_blank">News18</a></div><hr class="dividingLine"><p class="itemTitle">Isha Foundation and Indian Army to offer Classical Hatha Yoga training to 10,000 soldiers <span id="clusterLabel">education</span></p><p class="itemSummary">Lt Gen Ajai Kumar Singh, AVSM, YSM, SM, VSM, GOC-in-C, Southern Command inaugurated the ceremony and highlighted the importance of mental wellness in ...</p><div class="itemLinks"><a class="singleLink" href="https://www.dnaindia.com/india/report-isha-foundation-and-indian-army-to-offer-classical-hatha-yoga-training-to-10000-soldiers-3056076" target="_blank">DNA</a> | <a class="singleLink" href="https://www.news18.com/india/isha-foundation-indian-army-to-offer-classical-hatha-yoga-training-to-10000-soldiers-8538639.html" target="_blank">News18</a></div><hr class="dividingLine"><img src="https://cdn.dnaindia.com/sites/default/files/styles/third/public/2023/08/16/2603565-2602919-supreme-court.jpg" class="clusterImage" /><p class="itemTitle">Supreme Court releases handbook to combat gender-based stereotypes <span id="clusterLabel">legal</span></p><p class="itemSummary">Supreme Court releases handbook to combat gender stereotypes and releases alternate words for many judicial terms....</p><div class="itemLinks"><a class="singleLink" href="https://www.dnaindia.com/india/report-supreme-court-releases-handbook-to-combat-gender-based-stereotypes-3056059" target="_blank">DNA</a> | <a class="singleLink" href="https://www.news18.com/india/no-adulteress-mistress-prostitute-sc-launches-handbook-to-combat-gender-stereotypes-in-judgements-8538588.html" target="_blank">News18</a></div><hr class="dividingLine"><p class="itemTitle">Supriya Sule reacts to Sharad Pawar and Ajit Pawar's meeting, says 'unaware of...' <span id="clusterLabel">politics</span></p><p class="itemSummary">The meeting between NCP founder Sharad Pawar and his nephew and Maharashtra Deputy Chief Minister Ajit Pawar on August 12 at businessman Atul Chordiya...</p><div class="itemLinks"><a class="singleLink" href="https://timesofindia.indiatimes.com/india/ajit-pawar-too-junior-to-make-an-offer-to-sharad-sanjay-raut/articleshow/102785208.cms" target="_blank">TOI</a> | <a class="singleLink" href="https://www.dnaindia.com/india/report-supriya-sule-reacts-to-sharad-pawar-and-ajit-pawar-s-meeting-says-unaware-of-ncp-bjp-3056080" target="_blank">DNA</a></div><hr class="dividingLine"><p class="itemTitle">Flood warning in Delhi-NCR again? Yamuna water level breaches danger mark amid Himachal Pradesh rains <span id="clusterLabel">climate</span></p><p class="itemSummary">The rainfall in northern states such as Himachal Pradesh and Uttarakhand has caused the Yamuna River water level to cross the danger mark once again....</p><div class="itemLinks"><a class="singleLink" href="https://www.dnaindia.com/india/report-flood-warning-in-delhi-ncr-again-yamuna-water-level-breaches-danger-mark-amid-himachal-pradesh-rains-3056035" target="_blank">DNA</a> | <a class="singleLink" href="https://www.news18.com/india/yamuna-water-level-crosses-danger-mark-as-heavy-rains-lash-delhi-8537663.html" target="_blank">News18</a></div><hr class="dividingLine"><img src="https://cdn.dnaindia.com/sites/default/files/styles/third/public/2023/08/16/2603536-a-99.png" class="clusterImage" /><p class="itemTitle">Jadavpur University case: 6 more held in connection with death of JU student <span id="clusterLabel">crime</span></p><p class="itemSummary">The city police have taken cognisance of JU students' social media posts, including photographs, which suggest that there was an element of sexual har...</p><div class="itemLinks"><a class="singleLink" href="https://www.dnaindia.com/india/report-jadavpur-university-case-6-more-held-in-connection-with-death-of-ju-student-3056032" target="_blank">DNA</a> | <a class="singleLink" href="https://www.firstpost.com/india/jadavpur-university-ragging-case-6-more-arrested-in-death-of-18-year-old-bengali-honours-student-13003192.html" target="_blank">Firstpost</a></div><hr class="dividingLine"><p class="itemTitle">Delhi woman kills live-in partner's son over divorce demand from wife <span id="clusterLabel">crime</span></p><p class="itemSummary">Police, after that, started a probe into the matter and during the investigation, footage from a CCTV camera was examined....</p><div class="itemLinks"><a class="singleLink" href="https://www.dnaindia.com/india/report-delhi-woman-kills-live-in-partner-s-son-over-divorce-demand-from-wife-3056021" target="_blank">DNA</a> | <a class="singleLink" href="https://www.news18.com/india/delhi-woman-kills-minor-son-of-live-in-partner-stuffs-body-in-bed-box-8537698.html" target="_blank">News18</a></div><hr class="dividingLine"><p class="itemTitle">Burger King stops using tomatoes in food items amid soaring retail prices <span id="clusterLabel">biz</span></p><p class="itemSummary">Burger King stops using tomatoes in food items amid soaring retail prices...</p><div class="itemLinks"><a class="singleLink" href="https://www.firstpost.com/india/burger-king-stops-using-tomatoes-in-food-items-amid-soaring-retail-prices-13005722.html" target="_blank">Firstpost</a> | <a class="singleLink" href="https://www.news18.com/india/will-be-back-soon-burger-king-india-removes-tomatoes-from-food-items-amid-its-price-surge-8538900.html" target="_blank">News18</a></div><hr class="dividingLine"></div><div class="column" id="right"><p class="itemTitle">ED questions pre-arrest bail to Robert Vadra in corruption case <span id="clusterLabel">legal</span></p><p class="itemSummary">ED questions pre-arrest bail to Robert Vadra in corruption case...</p><div class="itemLinks"><a class="singleLink" href="https://www.firstpost.com/india/ed-questions-pre-arrest-bail-to-robert-vadra-in-corruption-case-13005492.html" target="_blank">Firstpost</a> | <a class="singleLink" href="https://www.news18.com/india/ed-challenges-anticipatory-bail-to-vadra-claims-non-compliance-with-bail-conditions-8538954.html" target="_blank">News18</a></div><hr class="dividingLine"><p class="itemTitle">Cabinet approves extension of Digital India programme with outlay of Rs 14,903 crore <span id="clusterLabel">tech</span></p><p class="itemSummary">Cabinet approves extension of Digital India programme with outlay of Rs 14,903 crore...</p><div class="itemLinks"><a class="singleLink" href="https://www.firstpost.com/india/cabinet-approves-extension-of-digital-india-programme-with-outlay-of-rs-14903-crore-13004202.html" target="_blank">Firstpost</a> | <a class="singleLink" href="https://www.news18.com/india/digital-india-cabinet-approves-extension-project-with-outlay-of-rs-14903-crore-ashwini-vaishnaw-pm-modi-8538403.html" target="_blank">News18</a></div><hr class="dividingLine"><p class="itemTitle">Centre to deploy 10,000 new electric buses across India under PM e-Bus Sewa scheme <span id="clusterLabel">climate</span></p><p class="itemSummary">Centre to deploy 10,000 new electric buses across India under PM e-Bus Sewa scheme...</p><div class="itemLinks"><a class="singleLink" href="https://www.firstpost.com/india/centre-to-deploy-10000-new-electric-buses-across-india-under-pm-e-bus-sewa-scheme-13004172.html" target="_blank">Firstpost</a> | <a class="singleLink" href="https://www.news18.com/india/pm-e-bus-seva-around-10000-electric-buses-to-be-deployed-across-india-as-cabinet-approves-scheme-8538399.html" target="_blank">News18</a></div><hr class="dividingLine"><img src="https://images.firstpost.com/fpimages/380x285/fixed/jpg/2023/08/Celeste-Wallander-2023-08-16T153137.179.jpg" class="clusterImage" /><p class="itemTitle">Centre to provide Rs 1 lakh loan at maximum 5% interest under Vishwakarma Scheme to support traditional skills <span id="clusterLabel">biz</span></p><p class="itemSummary">Centre to provide Rs 1 lakh loan at maximum 5% interest under Vishwakarma Scheme to support traditional skills...</p><div class="itemLinks"><a class="singleLink" href="https://www.firstpost.com/india/centre-to-provide-rs-1-lakh-loan-with-maximum-5-interest-under-vishwakarma-scheme-to-support-traditional-skills-13004262.html" target="_blank">Firstpost</a> | <a class="singleLink" href="https://www.news18.com/india/pm-vishwakarma-scheme-union-cabinet-rs-13000-crore-artisans-skilled-workers-craftsmen-artisans-8538450.html" target="_blank">News18</a></div><hr class="dividingLine"><p class="itemTitle">'Tulsi Bhai' shows off his rhythm: WHO chief Tedros arrives in India for first traditional medicine summit | WATCH <span id="clusterLabel">foreign-policy</span></p><p class="itemSummary">'Tulsi Bhai' shows off his rhythm: WHO chief Tedros arrives in India for first traditional medicine summit | WATCH...</p><div class="itemLinks"><a class="singleLink" href="https://www.firstpost.com/india/tulsi-bhai-shows-off-his-rhythm-who-chief-tedros-arrives-in-india-for-first-traditional-medicine-summit-watch-13003832.html" target="_blank">Firstpost</a> | <a class="singleLink" href="https://www.news18.com/india/who-chief-tedros-arrives-in-india-for-worlds-first-traditional-medicine-global-summit-8538126.html" target="_blank">News18</a></div><hr class="dividingLine"><img src="https://images.firstpost.com/fpimages/380x285/fixed/jpg/2023/08/Delhi-murder.jpg" class="clusterImage" /><p class="itemTitle">Woman kills lover's kid, stuffs body in bed box; thinks dad wouldn't walk out of marriage till boy is there <span id="clusterLabel">crime</span></p><p class="itemSummary">Woman kills lover's kid, stuffs body in bed box; thinks dad wouldn't walk out of marriage till boy is there...</p><div class="itemLinks"><a class="singleLink" href="https://www.firstpost.com/india/delhi-woman-kills-lovers-kid-stuffs-body-in-bed-box-thinks-dad-wouldnt-walk-out-of-marriage-till-boy-is-there-13003172.html" target="_blank">Firstpost</a> | <a class="singleLink" href="https://www.news18.com/india/delhi-woman-kills-minor-son-of-live-in-partner-stuffs-body-in-bed-box-8537698.html" target="_blank">News18</a></div><hr class="dividingLine"><p class="itemTitle">Delhi Assembly session: AAP, BJP prepared for stormy debate over GNCTD (Amendment) Act <span id="clusterLabel">politics</span></p><p class="itemSummary">Delhi Assembly session: AAP, BJP prepared for stormy debate over GNCTD (Amendment) Act...</p><div class="itemLinks"><a class="singleLink" href="https://www.firstpost.com/india/delhi-assembly-session-aap-bjp-prepared-for-stormy-debate-over-gnctd-amendment-act-13002702.html" target="_blank">Firstpost</a> | <a class="singleLink" href="https://www.news18.com/india/delhi-assembly-session-today-stormy-scenes-ahead-over-gnctd-amendment-act-8537748.html" target="_blank">News18</a></div><hr class="dividingLine"><p class="itemTitle">On Final Approach: Chandrayaan-3 makes final orbit reduction, prepares for Vikram lander's separation <span id="clusterLabel">tech</span></p><p class="itemSummary">On Final Approach: Chandrayaan-3 makes final orbit reduction, prepares for Vikram lander's separation...</p><div class="itemLinks"><a class="singleLink" href="https://www.firstpost.com/tech/news-analysis/on-final-approach-chandrayaan-3-makes-final-orbit-reduction-prepares-for-vikram-landers-separation-13002402.html" target="_blank">Firstpost</a> | <a class="singleLink" href="https://www.news18.com/india/chandrayaan-3-vikram-lander-separation-today-isro-circular-lunar-orbit-achieved-india-moon-mission-8539060.html" target="_blank">News18</a></div><hr class="dividingLine"><p class="itemTitle">Man Dies After Questioning By UP Cops, Family Alleges Torture in Custody <span id="clusterLabel">crime</span></p><p class="itemSummary">Police have denied the charge, saying that the farmer appeared to have died of cardiac arrest after leaving the outpost...</p><div class="itemLinks"><a class="singleLink" href="https://www.ndtv.com/india-news/up-man-dies-after-leaving-police-outpost-family-accuses-cops-of-torture-4304146" target="_blank">NDTV</a> | <a class="singleLink" href="https://www.news18.com/india/man-dies-after-questioning-by-up-cops-family-alleges-torture-in-custody-8539022.html" target="_blank">News18</a></div><hr class="dividingLine"><p class="itemTitle">'All Set for Navratri': PM Modi Cheers for WHO's 'Tulsi Bhai' Tedros as He Plays Dandiya | WATCH <span id="clusterLabel">celeb</span></p><p class="itemSummary">Tedros arrived in India in the morning to participate in a two-day Traditional Medicine Global Summit in Gandhinagar, Gujarat....</p><div class="itemLinks"><a class="singleLink" href="https://www.firstpost.com/india/tulsi-bhai-shows-off-his-rhythm-who-chief-tedros-arrives-in-india-for-first-traditional-medicine-summit-watch-13003832.html" target="_blank">Firstpost</a> | <a class="singleLink" href="https://www.news18.com/india/pm-modi-cheers-for-whos-tulsi-bhai-tedros-as-he-plays-dandiya-watch-video-8538318.html" target="_blank">News18</a></div><hr class="dividingLine"></div></div></div></body></html>
