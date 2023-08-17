@@ -5,18 +5,23 @@
 }
 
 .itemTitle {
-    font-weight: bold;
-    font-size: 16px;
-    margin-bottom: 1rem !important;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 1rem !important;
+  line-height: 22px;
 }
+
+.itemLinks a {
+  font-weight: bold;
+ }
 
 .dividingLine {
     border: 1px dotted #c6c6c6;
     border-style: none none dotted;
     color: #fff;
     background-color: #fff;
-    padding-top: 12px;
-    margin-bottom: 15px;
+    padding-top: 20px;
+    margin-bottom: 25px;
 }
 
 .siteTitle {
