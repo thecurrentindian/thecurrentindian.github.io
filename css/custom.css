@@ -1,3 +1,30 @@
+ .mainLink {
+    margin: 1rem 0rem;
+ }
+ .mainLink a { 
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    color: #004860;
+ } 
+.mainLink a:hover { 
+    background: lightblue;
+}
+
+.itemLinks a {
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    color: #004860;
+ }
+ 
+ .itemLinks a:hover { 
+    background: lightblue;
+}
+
+ 
 .itemSummary {
     font-size: 16px;
     font-style: normal;
@@ -68,8 +95,6 @@ hr {
   max-width: 1000px; 
 }
 
-
-
 footer {
     background-color: #333;
     color: white;
@@ -119,22 +144,5 @@ footer {
     color: white;
 }
 
-.itemLinks a {
-    font-weight: normal;
-    font-family: sans-serif;
-    text-decoration: none;
- }
- 
- .mainLink {
-    margin: 1rem 0rem;
- }
- .mainLink a { 
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 24px;
-    color: #004860;
- } 
-.mainLink a:hover { 
-    background: lightblue;
-} 
+
+
