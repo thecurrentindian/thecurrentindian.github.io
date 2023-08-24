@@ -39,7 +39,7 @@
 }
 
 .itemLabel {
-  background: gold;
+  background: #fcf4b1;
   padding: 0px 5px;
   margin: 0px 5px;
   border-radius: 3px;
@@ -50,8 +50,8 @@
   border-style: none none dotted;
   color: #fff;
   background-color: #fff;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .siteTitle {
