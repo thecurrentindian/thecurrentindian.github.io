@@ -4,7 +4,7 @@
  .mainLink a { 
     text-decoration: none;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 24px;
     color: #004860;
  } 
@@ -15,7 +15,7 @@
 .itemLinks a {
     text-decoration: underline;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 24px;
     color: #004860;
  }
@@ -25,7 +25,7 @@
 }
  
 .itemSummary {
-    font-size: 16px;
+    font-size: 15px;
     font-style: italic;
     margin-bottom: 1rem !important;
     padding-left: 10px;
@@ -33,61 +33,68 @@
 }
 
 .itemTitle {
-    font-weight: bold;
-    font-size: 18px;
-    margin-bottom: 1rem !important;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 1rem !important;
 }
 
+.itemLabel {
+  background: gold;
+  padding: 0px 5px;
+  margin: 0px 5px;
+  border-radius: 3px;
+} 
+
 .dividingLine {
-    border: 1px dotted #c6c6c6;
-    border-style: none none dotted;
-    color: #fff;
-    background-color: #fff;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+  border: 1px dotted #c6c6c6;
+  border-style: none none dotted;
+  color: #fff;
+  background-color: #fff;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .siteTitle {
-    font-size: 34px;
-    font-weight: 700;
-    margin-top: 0.5em;
-    margin-bottom: 0em;
+  font-size: 34px;
+  font-weight: 700;
+  margin-top: 0.5em;
+  margin-bottom: 0em;
 }
 
 .updateInfo {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .updateInfo p {
-    font-size: 14px;
-    margin-bottom: 1rem;
+  font-size: 14px;
+  margin-bottom: 1rem;
 }
 
 .updateInfo #lastUpdated {
-    text-align: right;
+  text-align: right;
 }
 
 hr {
-    position: relative;
-    border: none;
-    height: 1px;
-    background: #333;
+  position: relative;
+  border: none;
+  height: 1px;
+  background: #333;
 }
 
 .clusterImage {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .clusterLabel {
-    background: #2f4471;
-    padding: 5px 10px;
-    color: white;
-    font-size: 22px;
-    font-weight: 700;
-    border-radius: 2px;
-    margin-bottom: 1.5rem;
+  background: #2f4471;
+  padding: 5px 10px;
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+  border-radius: 2px;
+  margin-bottom: 1.5rem;
 }
 
 .container {
